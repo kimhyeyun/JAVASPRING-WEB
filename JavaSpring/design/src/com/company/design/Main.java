@@ -3,6 +3,10 @@ package com.company.design;
 import com.company.design.adapter.*;
 import com.company.design.aop.AopBrowser;
 import com.company.design.decorator.*;
+import com.company.design.facade.Ftp;
+import com.company.design.facade.Reader;
+import com.company.design.facade.SftpClient;
+import com.company.design.facade.Writer;
 import com.company.design.observer.Button;
 import com.company.design.observer.IButtonListener;
 import com.company.design.proxy.Browser;
@@ -11,6 +15,7 @@ import com.company.design.proxy.IBrowser;
 import com.company.design.singleton.AClazz;
 import com.company.design.singleton.BClazz;
 import com.company.design.singleton.SocketClient;
+import com.company.design.stategy.*;
 
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -98,7 +103,7 @@ public class Main {
         audi5.showPrice();*/
 
         // observer
-        Button button = new Button("버튼");
+/*        Button button = new Button("버튼");
         button.addListener(new IButtonListener() {
             @Override
             public void clickEvent(String event) {
@@ -108,7 +113,63 @@ public class Main {
         button.click("메세지 전달 : click1");
         button.click("메세지 전달 : click2");
         button.click("메세지 전달 : click3");
-        button.click("메세지 전달 : click4");
+        button.click("메세지 전달 : click4");*/
+
+        // FTP
+       /* Ftp ftpClient = new Ftp("www.foo.co.kr",22,"/home/etc");
+        ftpClient.connect();
+        ftpClient.moveDirectory();
+
+        Writer writer = new Writer("text.tmp");
+        writer.fileConnect();
+        writer.write();
+
+        Reader reader = new Reader("text.tmp");
+        reader.fileConnect();
+        reader.fileRead();
+
+        reader.fileDisconnect();
+        writer.fileDisConnect();
+        ftpClient.disConnect();
+
+        // 코드를 줄일 수 있음 의존성을 안으로 숨김
+        SftpClient sftpClient = new SftpClient("www.foo.co.kr",22,"/home/etc", "text.tmp");
+        sftpClient.connect();
+
+        sftpClient.write();
+        sftpClient.read();
+
+        sftpClient.disConnect();*/
+
+
+        // Strategy
+        Encoder encoder = new Encoder();
+
+        // base64 전략 (전략 객체)
+        EncodingStrategy base64 = new Base64Strategy();
+
+        // normal 전략 (전략 객체)
+        EncodingStrategy normal = new NormalStrategy();
+
+        // Append 전략 (전략 객체)
+        EncodingStrategy append = new Appendstrategy();
+
+        String message = "hello java";
+
+        encoder.setEncodingStrategy(base64);
+        String baseResult = encoder.getMessage(message);
+        System.out.println(baseResult);
+
+        encoder.setEncodingStrategy(normal);
+        String normalResult = encoder.getMessage(message);
+        System.out.println(normalResult);
+
+        encoder.setEncodingStrategy(append);
+        String appendResult = encoder.getMessage(message);
+        System.out.println(appendResult);
+
+
+
 
     }
 
