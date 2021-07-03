@@ -1,4 +1,4 @@
-# POST METHOD
+# POST
 
 - Post API
 
