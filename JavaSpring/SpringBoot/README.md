@@ -18,15 +18,12 @@
 > Spring에서 불편한 설정이 없음 (XML 설정 등등)
 
 
-### [GET API][getlink]
+### [1. GET API][getlink]
 
 [getlink]:https://github.com/kimhyeyun/FastCampus/tree/main/JavaSpring/SpringBoot/hello
-
-
-### [POST API][postlink]
+### [2. POST API][postlink]
 
 [postlink]:https://github.com/kimhyeyun/FastCampus/tree/main/JavaSpring/SpringBoot/post
-
-### [PUT API][putlink]
+### [3. PUT API][putlink]
 
 [putlink]:https://github.com/kimhyeyun/FastCampus/tree/main/JavaSpring/SpringBoot/put
