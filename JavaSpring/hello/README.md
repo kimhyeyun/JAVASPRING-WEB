@@ -25,7 +25,9 @@
 ## API
 ![무제](https://user-images.githubusercontent.com/50236501/124251750-399f8b80-db61-11eb-9125-40f3b8c58a60.jpg)
 
-- Get API   
+- [Get API][getlink]
+
+[getlink]:https://github.com/kimhyeyun/FastCampus/tree/main/JavaSpring/hello   
 
 |이름|설명|
 |:------|:---|
@@ -37,20 +39,14 @@
 |@RequestMapping|리소스를 설정 (method로 구분가능)|
 
 
-- Post API
+- [Post API][postlink]
 
-|이름|설명|
-|:------|:---|
-|@RestController|RestAPI 설정|
-|@RequestMapping|리소스를 설정 (method로 구분가능)|
-|@PostMapping|Post Resource 설정|
-|@RequestBody|Request Body 부분 Parsing|
-|@PathVariable|URL Path Variable Parsing|
-|@JsonProperty|json naming|
-|@JsonNaming|class json naming|
+[postlink]:https://github.com/kimhyeyun/FastCampus/tree/main/JavaSpring/post
 
 
-- Put API
+- [Put API][putlink]
+
+[putlink]:
 
 |이름|설명|
 |:------|:---|
