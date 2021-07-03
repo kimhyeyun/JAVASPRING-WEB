@@ -1,4 +1,4 @@
-# JAVA & SPRING
+# PART 3. 스프링 입문
 
 ### [1. Design Pattern][designpatternlink]
 
