@@ -1,5 +1,3 @@
-# FastCampus
-
-### [1. JAVA & SPRING][javaspringlink]
-
-[javaspringlink]: https://github.com/kimhyeyun/FastCampus/tree/main/JavaSpring
+# JAVA & SPRING WEB 개발   
+  
+> Java/Spring Web 개발 강의 정리 REPOSITORY
