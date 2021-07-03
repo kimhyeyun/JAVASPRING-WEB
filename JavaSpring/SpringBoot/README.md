@@ -16,3 +16,17 @@
 > 대규모프로젝트(운영환경)에 필요한 비 기능적 기능도 제공
 > 오랜 경험에서 나오는 안정적인 운영이 가능
 > Spring에서 불편한 설정이 없음 (XML 설정 등등)
+
+
+### [GET API][getlink]
+
+[getlink]:https://github.com/kimhyeyun/FastCampus/tree/main/JavaSpring/SpringBoot/hello
+
+
+### [POST API][postlink]
+
+[postlink]:https://github.com/kimhyeyun/FastCampus/tree/main/JavaSpring/SpringBoot/post
+
+### [PUT API][putlink]
+
+[putlink]:https://github.com/kimhyeyun/FastCampus/tree/main/JavaSpring/SpringBoot/put
