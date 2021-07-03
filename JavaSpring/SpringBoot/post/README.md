@@ -1,6 +1,5 @@
-# POST METHOD
+# POST
 
-- Post API
 
 |이름|설명|
 |:------|:---|
