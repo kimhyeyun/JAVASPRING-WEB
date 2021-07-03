@@ -34,3 +34,6 @@
 ### [4. DELETE API][dellink]
 
 [dellink]:https://github.com/kimhyeyun/FastCampus/tree/main/JavaSpring/SpringBoot/delete
+### [5. RESPONSE API][rlink]
+
+[rlink]:https://github.com/kimhyeyun/FastCampus/tree/main/JavaSpring/SpringBoot/response
