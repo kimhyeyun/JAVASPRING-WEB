@@ -1,4 +1,4 @@
-# Get API  
+# GET
 
 |이름|설명|
 |:------|:---|
@@ -12,27 +12,7 @@
 ## REST API Client 
 ![무제](https://user-images.githubusercontent.com/50236501/124254994-a49e9180-db64-11eb-9b2a-63bf14296b8a.jpg)
 
-***
-## API
-![무제](https://user-images.githubusercontent.com/50236501/124251750-399f8b80-db61-11eb-9125-40f3b8c58a60.jpg)
 
-
-- [Post API][postlink]
-
-[postlink]:https://github.com/kimhyeyun/FastCampus/tree/main/JavaSpring/post
-
-
-- [Put API][putlink]
-
-[putlink]:
-
-|이름|설명|
-|:------|:---|
-|@RestController|RestAPI 설정|
-|@RequestMapping|리소스를 설정 (Method로 구분가능)|
-|@PutMapping|Put Resource 설정|
-|@ReuqestBody|Request Body 부분 Parsing|
-|@PathVariable|URL Path Variable Parsing|
 
 
 - Delete API
