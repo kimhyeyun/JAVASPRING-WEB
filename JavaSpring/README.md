@@ -10,5 +10,5 @@
 
 ### [3. Spring Boot][springlink]
 
-[springlink]: https://github.com/kimhyeyun/FastCampus/tree/main/JavaSpring/hello
+[springlink]: https://github.com/kimhyeyun/FastCampus/tree/main/JavaSpring/SpringBoot
 
