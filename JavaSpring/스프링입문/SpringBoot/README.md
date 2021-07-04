@@ -24,16 +24,19 @@
 
 ### [1. GET API][getlink]
 
-[getlink]:https://github.com/kimhyeyun/FastCampus/tree/main/JavaSpring/SpringBoot/hello
+[getlink]:https://github.com/kimhyeyun/JAVASPRING-WEB/tree/main/JavaSpring/스프링입문/SpringBoot/hello
 ### [2. POST API][postlink]
 
-[postlink]:https://github.com/kimhyeyun/FastCampus/tree/main/JavaSpring/SpringBoot/post
+[postlink]:https://github.com/kimhyeyun/JAVASPRING-WEB/tree/main/JavaSpring/스프링입문/SpringBoot/post
 ### [3. PUT API][putlink]
 
 [putlink]:https://github.com/kimhyeyun/FastCampus/tree/main/JavaSpring/SpringBoot/put
 ### [4. DELETE API][dellink]
 
-[dellink]:https://github.com/kimhyeyun/FastCampus/tree/main/JavaSpring/SpringBoot/delete
+[dellink]:https://github.com/kimhyeyun/JAVASPRING-WEB/tree/main/JavaSpring/스프링입문/SpringBoot/delete
 ### [5. RESPONSE API][rlink]
 
 [rlink]:https://github.com/kimhyeyun/FastCampus/tree/main/JavaSpring/SpringBoot/response
+### [6. OBJECT-MAPPER][olink]
+
+[olink]:https://github.com/kimhyeyun/JAVASPRING-WEB/tree/main/JavaSpring/스프링입문/SpringBoot/object-mapper
