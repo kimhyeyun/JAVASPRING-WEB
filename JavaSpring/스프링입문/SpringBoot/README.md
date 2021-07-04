@@ -30,13 +30,13 @@
 [postlink]:https://github.com/kimhyeyun/JAVASPRING-WEB/tree/main/JavaSpring/스프링입문/SpringBoot/post
 ### [3. PUT API][putlink]
 
-[putlink]:https://github.com/kimhyeyun/FastCampus/tree/main/JavaSpring/SpringBoot/put
+[putlink]:https://github.com/kimhyeyun/JAVASPRING-WEB/tree/main/JavaSpring/스프링입문/SpringBoot/put
 ### [4. DELETE API][dellink]
 
 [dellink]:https://github.com/kimhyeyun/JAVASPRING-WEB/tree/main/JavaSpring/스프링입문/SpringBoot/delete
 ### [5. RESPONSE API][rlink]
 
-[rlink]:https://github.com/kimhyeyun/FastCampus/tree/main/JavaSpring/SpringBoot/response
+[rlink]:https://github.com/kimhyeyun/JAVASPRING-WEB/tree/main/JavaSpring/스프링입문/SpringBoot/response
 ### [6. OBJECT-MAPPER][olink]
 
 [olink]:https://github.com/kimhyeyun/JAVASPRING-WEB/tree/main/JavaSpring/스프링입문/SpringBoot/object-mapper
