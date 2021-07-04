@@ -1,14 +1,6 @@
-# PART 3. 스프링 입문 👶
+# Spring을 조금 더 들여다보기
 
-### [1. Design Pattern][designpatternlink]
+### 1. [스프링의 핵심][1link]
 
-[designpatternlink]: https://github.com/kimhyeyun/FastCampus/tree/main/JavaSpring/design
-
-### [2. 웹 개발 개론][logiclink]
-
-[logiclink]: https://github.com/kimhyeyun/FastCampus/tree/main/JavaSpring/웹개발개론
-
-### [3. Spring Boot][springlink]
-
-[springlink]: https://github.com/kimhyeyun/FastCampus/tree/main/JavaSpring/SpringBoot
+[1link]:
 
