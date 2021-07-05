@@ -15,8 +15,30 @@
 - 코드를 확장하거나 변경 할 때 영향을 최소화 (추상화)
 - 순환참조를 막을 수 있음
   > 순환참조 : 내가 나를 참조하거나, 어떤 객체르 참조했는데 다시 나를 참조하는 것
+  
 - 재사용성을 높임
 - 코드 단순화
 - 왜 사용하는지 파악하기가 수월, 가독성이 높아짐
-- 종솟
+- 종속적이던 코드의 수도 줄여줌
+- 종속성이 감소, 구성 요소의 종속성이 감소하면, 변경에 민감하지 않음
+- 결합도(coupling)는 낮추면서 유연성과 확장성은 향상
+- 객체간의 의존관계 설정가능
+- 객체간의 의존관계를 없애거나 줄일 수 있음
 ```
+
+```
+Class Programmer{
+  private Coffee coffee;
+  
+  public Programmer(){
+    this.coffee = new Coffee();
+  }
+  
+  public startProgramming(){
+    this.coffee.drink();
+    ....
+  }
+}
+```
+위 코드와 같이 Programmer Class에서 startProgramming 함수가 호출되기 위해서는 Coffee Class를 필요로 함.    
+이것을 **Programmer Class는 Coffee Class의 의존성을 가진다.** 라고 함   
