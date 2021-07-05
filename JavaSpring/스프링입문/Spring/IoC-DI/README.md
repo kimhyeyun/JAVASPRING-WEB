@@ -41,11 +41,11 @@ Class Programmer{
 }
 ```
 위 코드와 같이 Programmer Class에서 startProgramming 함수가 호출되기 위해서는 Coffee Class를 필요로 함.    
-이와 같이 코드를 설계했을 때, 코드의 재활용성이 떨어지고, 위 예제에서 Coffee Class가 수정이 되었을 때, Programmar Class도 함께 수정해줘야하느 문제 발생   
+이와 같이 코드를 설계했을 때, 코드의 재활용성이 떨어지고, 위 예제에서 Coffee Class가 수정이 되었을 때, Programmar Class도 함께 수정해줘야하느 문제 발생     
 **즉, 결합도(coupling)가 높아지게 됨**
 
 
-만약 DI를 사용하지 않고 Coffee Class의 상속을 받은 Cappuccino나 Americano Class를 사용해야 한다며 다음과 같이 **직접** 수정해줘야함
+만약 DI를 사용하지 않고 Coffee Class의 상속을 받은 Cappuccino나 Americano Class를 사용해야 한다며 다음과 같이 **직접** 수정해줘야함      
 ```
 Class Coffee{...} // interface로 설계 가능
  
@@ -65,7 +65,7 @@ class Programmer{
 }
 ```
 
-극단적을, 만약 Coffee Class를 사용하는 Class가 100개라면 그 중 Cappuccino가 필요한 Class가 있다면 직저 수정해줘야함.
+극단적을, 만약 Coffee Class를 사용하는 Class가 100개라면 그 중 Cappuccino가 필요한 Class가 있다면 직접 수정해줘야함.   
 **굉장히 비효율적**   
 
 **의존성 주입 (DI)**을 이용하면 
@@ -83,3 +83,7 @@ class Programmer{
   }
 }
 ```
+
+   
+필요한(의존하는) 클래스를 직접 생성하느 것이 아닌, 주입해줌으로써 객체 간의 결합도를 줄이고 좀 더 유연한 코드르 작성 할 수 있음.    
+즉, **한 클래스를 수정하였을 때, 다른 클래스도 수정해야하는 상황을 막을 수 있음**
