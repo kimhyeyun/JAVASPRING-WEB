@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Base64;
 
-@Component
+@Component("base64")
 public class Base64Encoder implements IEncoder {
 
     public String encode(String msg){
