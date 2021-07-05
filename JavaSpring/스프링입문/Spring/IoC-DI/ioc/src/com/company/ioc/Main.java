@@ -25,7 +25,7 @@ public class Main {
         result = encoder.encode(url);
         System.out.println(result);
 
-        // Encoder 등을 건들필요 없이 가능~
+        // Encoder 등을 건들  필요 없이 가능~
         Encoder encoder1 = new Encoder(new Base64Encoder());
         result = encoder1.encode(url);
         System.out.println(result);
