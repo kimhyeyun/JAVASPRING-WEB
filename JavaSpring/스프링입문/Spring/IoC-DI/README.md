@@ -68,7 +68,7 @@ class Programmer{
 극단적을, 만약 Coffee Class를 사용하는 Class가 100개라면 그 중 Cappuccino가 필요한 Class가 있다면 직접 수정해줘야함.   
 **굉장히 비효율적**   
 
-**의존성 주입 (DI)**을 이용하면 
+**의존성 주입 (DI)** 을 이용하면 
 ```
 class Programmer{
   private Coffee coffee;
