@@ -33,6 +33,14 @@
 - 스프링 빈에만 AOP를 적용 가능
 - 모든 AOP 기능을 제공하는 것이 아닌 스프링 IoC와 연동하여 엔터프라이즈 애플리케이션에서 가장 흔한 문제(중복코드, 프록시 클래스 작성의 번거로움, 객체들 간 관계 복잡도 증가...)에 대한 해결책을 지원하는 것이 목적
 
+> 스프링 @AOP를 사용하기 위해서는 다음과 같이 dependency를 추가해야함
+```
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+```
 ***
 
 ### 주요 Annotation   
