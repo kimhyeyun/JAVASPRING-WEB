@@ -1,4 +1,4 @@
-# JAVA / SPRING 웹 개발
+# 💻 JAVA / SPRING 웹 개발
 
 ## [👶 PART 3.스프링 입문][3link]
 
