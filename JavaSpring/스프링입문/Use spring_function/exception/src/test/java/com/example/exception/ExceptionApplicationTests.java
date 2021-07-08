@@ -1,10 +1,10 @@
-package com.example.validation;
+package com.example.exception;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ValidationApplicationTests {
+class ExceptionApplicationTests {
 
     @Test
     void contextLoads() {

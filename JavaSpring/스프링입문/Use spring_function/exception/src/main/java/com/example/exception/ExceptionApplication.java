@@ -1,13 +1,13 @@
-package com.example.validation;
+package com.example.exception;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ValidationApplication {
+public class ExceptionApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ValidationApplication.class, args);
+        SpringApplication.run(ExceptionApplication.class, args);
     }
 
 }
