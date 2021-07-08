@@ -23,3 +23,7 @@ public void run(String account, String pw, int age){
 
 ![무제](https://user-images.githubusercontent.com/50236501/124909935-fb551100-e025-11eb-9a17-802f33a60b42.jpg)
 
+### Custom Validation
+
+1. AssertTrue / False 와 같은 method 지정을 통해서 Custom Logic 적용 가능
+2. ConstraintValidato를 적용하여 재사용이 가능한 Custom Logic 적용 가능
