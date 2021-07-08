@@ -25,5 +25,5 @@ public void run(String account, String pw, int age){
 
 ### Custom Validation
 
-1. AssertTrue / False 와 같은 method 지정을 통해서 Custom Logic 적용 가능 -> **재사용 불가**   
-2. ConstraintValidato를 적용하여 재사용이 가능한 Custom Logic 적용 가능 -> **재사용 가능**
+1. AssertTrue / False 와 같은 method 지정을 통해서 Custom Logic 적용 가능 ➡️ **재사용 불가**   
+2. ConstraintValidato를 적용하여 재사용이 가능한 Custom Logic 적용 가능 ➡️ **재사용 가능**
