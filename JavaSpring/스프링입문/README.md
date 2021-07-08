@@ -14,4 +14,6 @@
 ### [4. About Spring][4link]
 
 [4link]:https://github.com/kimhyeyun/JAVASPRING-WEB/tree/main/JavaSpring/스프링입문/Spring
+### [5. Use Spring Boot Function][5link]
 
+[5link]:https://github.com/kimhyeyun/JAVASPRING-WEB/tree/main/JavaSpring/스프링입문/Use%20spring_function
