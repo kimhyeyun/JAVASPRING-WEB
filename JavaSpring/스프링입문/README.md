@@ -17,3 +17,6 @@
 ### [5. Use Spring Boot Function][5link]
 
 [5link]:https://github.com/kimhyeyun/JAVASPRING-WEB/tree/main/JavaSpring/스프링입문/Use%20spring_function
+### [6. Server to Server 통신][6link]
+
+[6link]:https://github.com/kimhyeyun/JAVASPRING-WEB/tree/main/JavaSpring/스프링입문/Server%20to%20Server
