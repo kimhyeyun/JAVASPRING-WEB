@@ -1,7 +1,9 @@
 package com.example.server.controller;
 
+import com.example.server.dto.Req;
 import com.example.server.dto.User;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpEntity;
 import org.springframework.web.bind.annotation.*;
 
 @Slf4j
@@ -19,10 +21,23 @@ public class ServerApiController {
     }
 
     @PostMapping("/user/{userId}/name/{userName}")
-    public User post(@RequestBody User user, @PathVariable int userId, @PathVariable String userName){
+    public Req<User> post(
+//                    HttpEntity<String> entity,
+                    @RequestBody Req<User> user,
+                     @PathVariable int userId,
+                     @PathVariable String userName,
+                     @RequestHeader("x-authorization") String authorization,
+                     @RequestHeader("custom-header") String customHeader
+    ){
+//        log.info("entity : {}", entity);
         log.info("client req : {}", user);
         log.info("userId : {}, userName: {}", userId, userName);
+        log.info("authorization : {}, customHeader : {} ", authorization, customHeader);
 
-        return user;
+        Req<User> res = new Req<>();
+        res.setHeader(new Req.Header());
+        res.setResBody(user.getResBody());
+
+        return res;
     }
 }

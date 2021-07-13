@@ -1,5 +1,6 @@
 package com.example.client.controller;
 
+import com.example.client.dto.Req;
 import com.example.client.dto.UserResponse;
 import com.example.client.service.RestTemplateService;
 import lombok.AllArgsConstructor;
@@ -15,10 +16,12 @@ public class ApiController {
     private RestTemplateService restTemplateService;
 
     @GetMapping("/hello")
-    public UserResponse getHello(){
+    public Req<UserResponse> getHello(){
 //        return restTemplateService.hello();
-        restTemplateService.post();
-        return new UserResponse();
+//        restTemplateService.post();
+//        restTemplateService.exchange();
+        return restTemplateService.genericExchange();
+
     }
 
 }
