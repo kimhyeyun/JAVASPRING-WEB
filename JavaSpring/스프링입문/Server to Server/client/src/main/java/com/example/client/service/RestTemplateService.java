@@ -20,8 +20,8 @@ public class RestTemplateService {
         URI uri = UriComponentsBuilder
                 .fromUriString("http://localhost:9090")
                 .path("/api/server/hello")
-                .queryParam("name", "steve")
-                .queryParam("age", 10)
+                .queryParam("name", "aaa")
+                .queryParam("age", 99)
                 .encode()
                 .build()
                 .toUri();
