@@ -20,3 +20,6 @@
 ### [6. Server to Server 통신][6link]
 
 [6link]:https://github.com/kimhyeyun/JAVASPRING-WEB/tree/main/JavaSpring/스프링입문/Server%20to%20Server
+### [7. JUnit으로 테스트하기][7link]
+
+[7link]:https://github.com/kimhyeyun/JAVASPRING-WEB/tree/main/JavaSpring/스프링입문/JUnit
