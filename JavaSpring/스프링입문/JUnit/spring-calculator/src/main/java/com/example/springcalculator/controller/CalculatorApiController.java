@@ -13,16 +13,18 @@ public class CalculatorApiController {
 
     private final Calculator calculator;
 
+    // Get
     @GetMapping("/sum")
     public int sum(@RequestParam int x, @RequestParam int y){
         return calculator.sum(x,y);
     }
 
-/*    @GetMapping("/minus")
+    @GetMapping("/minus")
     public int minus(@RequestParam int x, @RequestParam int y){
         return calculator.minus(x, y);
-    }*/
+    }
 
+    // Post 
     @PostMapping("/minus")
     public Res minus(@RequestBody Req req){
         int result = calculator.minus(req.getX(), req.getY());
