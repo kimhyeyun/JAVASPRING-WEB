@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+
+<div th:fragment="sidebar" class="container-fluid" style="font-family: 'Yeon Sung', cursive; font-size: 18px; color: #6d6d6d;" >
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 " style="background-color: #fbfaf9">
+            <div class="d-flex flex-column align-items-center align-items-sm-start pt-3 text-white min-vh-100">
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start " id="menu" style="color: #6d6d6d; padding: 55px 0 0 30px">
+                    <li class="nav-item" style="text-decoration: none;">
+                        <a href="/" class="nav-link align-middle px-0" style="text-decoration: none; color: #6d6d6d;">
+                            <img th:src="@{/images/logo.jpg }"class="mx-3">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" data-bs-toggle="collapse" class="nav-link px-0 mx-4 align-middle" style="text-decoration: none;color: #6d6d6d;">HOME </a>
+                    </li>
+                    <li>
+                        <a href="" data-bs-toggle="collapse" class="nav-link px-0 mx-4 align-middle" style="text-decoration: none;color: #6d6d6d;">IPHONE </a>
+                    </li>
+                    <li>
+                        <a href="" data-bs-toggle="collapse" class="nav-link px-0 mx-4 align-middle" style="text-decoration: none;color: #6d6d6d;">AIRPODS</a>
+                    </li>
+                    <li>
+                        <a href="" data-bs-toggle="collapse" class="nav-link px-0 mx-4 align-middle" style="text-decoration: none;color: #6d6d6d;">SMART TOK</a>
+                    </li>
+                    <li>
+                        <a href="" data-bs-toggle="collapse" class="nav-link px-0 mx-4 align-middle" style="text-decoration: none;color: #6d6d6d;">KEYRING</a>
+                    </li>
+                    <li>
+                        <a href="" data-bs-toggle="collapse" class="nav-link px-0 mx-4 align-middle" style="text-decoration: none;color: #6d6d6d;">Q&A</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div style="width: 100%;">
+            <div th:replace="/fragments/header::header"></div>
+            <div layout:fragment="content" class="content px-5 py-5"></div>
+<!--            <div th:replace="/fragments/footer::footer"></div>-->
+        </div>
+
+    </div>
+</div>
+</html>
