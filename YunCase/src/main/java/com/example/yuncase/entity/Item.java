@@ -12,7 +12,7 @@ import java.util.List;
 @Table(name = "item")
 @Getter@Setter
 @ToString
-public class Item {
+public class Item extends BaseEntity{
     @Id
     @Column(name = "item_id")
     @GeneratedValue(strategy = GenerationType.AUTO)

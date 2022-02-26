@@ -2,11 +2,14 @@ package com.example.yuncase.service;
 
 import com.example.yuncase.dto.ItemFormDto;
 import com.example.yuncase.dto.ItemImgDto;
+import com.example.yuncase.dto.ItemSearchDto;
 import com.example.yuncase.entity.Item;
 import com.example.yuncase.entity.ItemImg;
 import com.example.yuncase.repository.ItemImgRepository;
 import com.example.yuncase.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -65,5 +68,10 @@ public class ItemService {
             itemImgService.updateItemImg(itemImgIds.get(i), itemImgFileList.get(i));
         }
         return item.getId();
+    }
+
+    @Transactional(readOnly = true)
+    public Page<Item> getAdminItemPage(ItemSearchDto itemSearchDto, Pageable pageable) {
+        return itemRepository.getAdminItemPage(itemSearchDto, pageable);
     }
 }
