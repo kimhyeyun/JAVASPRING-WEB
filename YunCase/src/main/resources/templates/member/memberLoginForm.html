@@ -22,8 +22,8 @@
         </div>
 
         <p th:if="${loginErrorMsg}" class="error" th:text="${loginErrorMsg}" style="text-align: left;"></p>
-        <button class="btn" style="background-color: #6d6d6d; color: white;">로그인</button>
-        <button type="button" class="btn" style="background-color: #6d6d6d; color: white;" onclick="location.href='/members/new'">회원가입</button>
+        <button class="btn" style="background-color: #c58876; color: white;">로그인</button>
+        <button type="button" class="btn" style="background-color: #c58876; color: white;" onclick="location.href='/members/new'">회원가입</button>
         <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
     </form>
 </div>

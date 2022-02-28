@@ -2,6 +2,7 @@ package com.example.yuncase.controller;
 
 import com.example.yuncase.dto.ItemFormDto;
 import com.example.yuncase.dto.ItemSearchDto;
+import com.example.yuncase.dto.ItemTypeDto;
 import com.example.yuncase.entity.Item;
 import com.example.yuncase.service.ItemService;
 import lombok.RequiredArgsConstructor;
@@ -70,7 +71,7 @@ public class ItemController {
 
     @PostMapping(value = "/admin/item/{itemId}")
     public String itemUpdate(@Valid ItemFormDto itemFormDto, BindingResult bindingResult, @RequestParam("itemImgFile") List<MultipartFile> itemImgFileList, Model model) {
-        if(bindingResult.hasErrors()) return "item/itemForm";
+        if (bindingResult.hasErrors()) return "item/itemForm";
         if (itemImgFileList.get(0).isEmpty() && itemFormDto.getId() == null) {
             model.addAttribute("errorMessage", "첫번째 상품 이미지는 필수 입력 값입니다.");
             return "item/itemForm";
@@ -86,14 +87,39 @@ public class ItemController {
 
     @GetMapping(value = {"/admin/items", "/admin/items/{page}"})
     public String itemManage(ItemSearchDto itemSearchDto, @PathVariable("page") Optional<Integer> page, Model model) {
-        Pageable pageable = PageRequest.of(page.isPresent() ? page.get() : 0, 3);
+        Pageable pageable = PageRequest.of(page.isPresent() ? page.get() : 0, 10);
         Page<Item> items = itemService.getAdminItemPage(itemSearchDto, pageable);
         model.addAttribute("items", items);
         model.addAttribute("itemList", items.getContent());
         model.addAttribute("itemSearchDto", itemSearchDto);
-        model.addAttribute("maxPage", 5);
+        model.addAttribute("maxPage", 10);
 
         return "item/itemMng";
     }
 
+    @GetMapping(value = "/item/{itemId}")
+    public String itemDtl(Model model, @PathVariable("itemId") Long itemId) {
+        ItemFormDto itemFormDto = itemService.getItemDtl(itemId);
+        model.addAttribute("item", itemFormDto);
+        return "item/itemDtl";
+    }
+
+    @GetMapping(value = {"/item/category/{type}", "/item/category/{type}/{page}"})
+    public String itemByType(Model model, @PathVariable("type") String type, @PathVariable("page") Optional<Integer> page) {
+//        ItemTypeDto itemTypeDto = itemService.getItemListByType(type);
+//
+//        model.addAttribute("itemList", itemTypeDto);
+
+        Pageable pageable = PageRequest.of(page.isPresent() ? page.get() : 0, 6);
+        Page<Item> items = itemService.getItemPageByType(type, pageable);
+        ItemTypeDto itemTypeDto = itemService.getItemListByType(items.getContent());
+
+        model.addAttribute("itemTypeDto", itemTypeDto);
+        model.addAttribute("type", type);
+        model.addAttribute("items", items);
+        model.addAttribute("itemList", items.getContent());
+        model.addAttribute("maxPage", 10);
+
+        return "item/itemsByType";
+    }
 }

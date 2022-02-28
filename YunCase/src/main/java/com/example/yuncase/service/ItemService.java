@@ -1,14 +1,13 @@
 package com.example.yuncase.service;
 
-import com.example.yuncase.dto.ItemFormDto;
-import com.example.yuncase.dto.ItemImgDto;
-import com.example.yuncase.dto.ItemSearchDto;
+import com.example.yuncase.dto.*;
 import com.example.yuncase.entity.Item;
 import com.example.yuncase.entity.ItemImg;
 import com.example.yuncase.repository.ItemImgRepository;
 import com.example.yuncase.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -73,5 +72,24 @@ public class ItemService {
     @Transactional(readOnly = true)
     public Page<Item> getAdminItemPage(ItemSearchDto itemSearchDto, Pageable pageable) {
         return itemRepository.getAdminItemPage(itemSearchDto, pageable);
+    }
+
+    @Transactional(readOnly = true)
+    public Page<Item> getItemPageByType(String type, Pageable pageable) {
+        return itemRepository.getItemPageByType(type, pageable);
+    }
+
+    @Transactional(readOnly = true)
+    public ItemTypeDto getItemListByType(List<Item> items) {
+
+        ItemTypeDto itemTypeDto = new ItemTypeDto(items.get(0));
+        for (Item item : items) {
+            ItemImg itemImg = itemImgRepository.findByItemIdAndRepimgYn(item.getId(), "Y");
+
+            ItemTypeListDto itemTypeListDto = new ItemTypeListDto(item, itemImg.getImgUrl());
+            itemTypeDto.addItemTypeListDto(itemTypeListDto);
+        }
+
+        return itemTypeDto;
     }
 }

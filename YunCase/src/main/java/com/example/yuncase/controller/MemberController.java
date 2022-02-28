@@ -31,8 +31,8 @@ public class MemberController {
     public String join(@Valid MemberFormDto memberFormDto, BindingResult bindingResult, Model model) {
         if (bindingResult.hasErrors()) return "member/memberForm";
         try {
-//            Member member = Member.createMember(memberFormDto, passwordEncoder);
-            Member member = Member.createAdmin(memberFormDto, passwordEncoder);
+            Member member = Member.createMember(memberFormDto, passwordEncoder);
+//            Member member = Member.createAdmin(memberFormDto, passwordEncoder);
             memberService.saveMember(member);
         } catch (IllegalStateException e) {
             model.addAttribute("errorMessage", e.getMessage());

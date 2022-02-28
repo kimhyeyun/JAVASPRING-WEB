@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+
+
+
+<!-- 사용자 CSS 추가 -->
+<th:block layout:fragment="css">
+    <style>
+        .col{
+            margin-bottom: 20px;
+        }
+        .mb-4{
+            margin-left: 10%;
+        }
+        ul {
+            text-decoration: none;
+        }
+        select{
+            margin-right:10px;
+        }
+
+        .thumbnail {
+            margin: 0 auto 20px;
+            text-align: center;
+        }
+
+        .prdList > li {
+            display: block;
+        }
+        .my.pagination > .active > a,
+        .my.pagination > .active > span,
+        .my.pagination > .active > a:hover,
+        .my.pagination > .active > span:hover,
+        .my.pagination > .active > a:focus,
+        .my.pagination > .active > span:focus {
+            background: #c58876;
+            border-color: #c58876;
+            color: white;
+        }
+
+
+
+    </style>
+</th:block>
+
+<div layout:fragment="content" class="content-mg">
+    <h2 class="mb-4">
+        <div th:text="${type}"></div>
+    </h2>
+<div class="container">
+    <div class="row row-cols-3">
+    <div class="xans-element- xans-product xans-product-listrecommend ec-base-product col"style="width: 100%; " th:each="item : ${itemTypeDto.getItemTypeListDtos()}">
+        <div class="xans-element- xans-product xans-product-listnormal ec-base-product" style="width: 100%;" >
+                    <div class="thumbnail">
+                        <div class="prdImg">
+                            <a th:href="@{/item/{itemId}(itemId = ${item.itemId})}">
+                                <img th:src="${item.imgUrl}" style="width: 300px;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="description" style="text-align: center;">
+                        <div>
+                        <strong class="name"><span th:text="${item.itemNm}" style="font-size: 16px; color: #555555; font-weight: bold;"></span></strong>
+                        </div>
+                        <div>
+                          <span th:text="'KRW' + ${item.orderPrice}" style="font-size: 16px; color: #ff0000; font-weight: bold"></span>
+                        </div>
+                    </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+    <div th:with="start=${(items.number/maxPage)*maxPage + 1}">
+        <div th:with="end=(${(items.totalPages == 0) ? 1 : (start + (maxPage - 1) < items.totalPages ? start + (maxPage - 1) : items.totalPages)})" >
+            <ul class="pagination my justify-content-center">
+
+                <li class="page-item" th:classappend="${items.number eq 0}?'disabled':''">
+                    <a th:href="@{'/item/category/' + ${type}+'/' + ${items.number - 1}}" aria-label='Previous' class="page-link">
+                        <span aria-hidden='true' style="color: #6d6d6d;">Previous</span>
+                    </a>
+                </li>
+
+                <li class="page-item"  th:each="page: ${#numbers.sequence(start, end)}" th:classappend="${items.number eq page - 1}?'active':''" >
+                    <a th:href="@{'/item/category/'+${type}+'/' + ${page - 1}}" th:inline="text" class="page-link" style=" border-color: #c58876; ">[[${page}]]</a>
+                </li>
+
+                <li class="page-item" th:classappend="${items.number+1 ge items.totalPages}?'disabled':''">
+                    <a th:href="@{'/item/category/' + ${type} + '/' + ${items.number + 1}}" aria-label='Next' class="page-link" style="color: #6d6d6d;">
+                        <span aria-hidden='true'>Next</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+</html>

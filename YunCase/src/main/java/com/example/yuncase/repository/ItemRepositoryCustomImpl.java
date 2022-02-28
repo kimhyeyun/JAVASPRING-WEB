@@ -61,4 +61,21 @@ public class ItemRepositoryCustomImpl implements ItemRepositoryCustom {
 
         return new PageImpl<>(content, pageable, total);
     }
+
+    @Override
+    public Page<Item> getItemPageByType(String type, Pageable pageable) {
+        QueryResults<Item> results = queryFactory
+                .selectFrom(QItem.item)
+                .where(QItem.item.type.eq(type))
+                .orderBy(QItem.item.id.asc())
+                .offset(pageable.getOffset())
+                .limit(pageable.getPageSize())
+                .fetchResults();
+
+        List<Item> content = results.getResults();
+        long total = results.getTotal();
+
+        return new PageImpl<>(content, pageable, total);
+
+    }
 }

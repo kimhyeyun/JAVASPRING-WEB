@@ -35,6 +35,18 @@
         select{
             margin-right:10px;
         }
+        .my.pagination > .active > a,
+        .my.pagination > .active > span,
+        .my.pagination > .active > a:hover,
+        .my.pagination > .active > span:hover,
+        .my.pagination > .active > a:focus,
+        .my.pagination > .active > span:focus {
+            background: #c58876;
+            border-color: #c58876;
+            color: white;
+        }
+
+
     </style>
 </th:block>
 
@@ -67,20 +79,20 @@
 
         <div th:with="start=${(items.number/maxPage)*maxPage + 1}">
             <div th:with="end=(${(items.totalPages == 0) ? 1 : ( start + (maxPage - 1) < items.totalPages ? start + (maxPage - 1) : items.totalPages)})" >
-            <ul class="pagination justify-content-center">
+            <ul class="pagination justify-content-center my">
 
-                <li class="page-item" th:classappend="${items.first}?'disabled'">
-                    <a th:onclick="'javascript:page(' + ${items.number - 1} + ')'" aria-label='Previous' class="page-link">
+                <li class="page-item" th:classappend="${items.first}?'disabled'" >
+                    <a th:onclick="'javascript:page(' + ${items.number - 1} + ')'" aria-label='Previous' class="page-link" style="color: #6d6d6d;" >
                         <span aria-hidden='true'>Previous</span>
                     </a>
                 </li>
 
-                <li class="page-item" th:each="page: ${#numbers.sequence(start, end)}" th:classappend="${items.number eq page - 1}?'active':''">
-                    <a th:onclick="'javascript:page(' + ${page - 1} + ')'" th:inline="text" class="page-link" style="background-color: #6d6d6d; color: white;">[[${page}]]</a>
+                <li class="page-item" th:each="page: ${#numbers.sequence(start, end)}" th:classappend="${items.number eq page - 1}?'active':''" >
+                    <a th:onclick="'javascript:page(' + ${page - 1} + ')'" th:inline="text" class="page-link" style="color: #6d6d6d;">[[${page}]]</a>
                 </li>
 
                 <li class="page-item" th:classappend="${items.last}?'disabled'">
-                    <a th:onclick="'javascript:page(' + ${items.number + 1} + ')'" aria-label='Next' class="page-link">
+                    <a th:onclick="'javascript:page(' + ${items.number + 1} + ')'" aria-label='Next' class="page-link"style="color: #6d6d6d;">
                         <span aria-hidden='true'>Next</span>
                     </a>
                 </li>
@@ -102,7 +114,7 @@
                 <option value="createdBy">등록자</option>
             </select>
             <input th:field="*{searchQuery}" type="text" class="form-control" placeholder="검색어를 입력해주세요">
-            <button id="searchBtn" type="submit" class="btn mx-2" style="background-color: #6d6d6d; color: white;">검색</button>
+            <button id="searchBtn" type="submit" class="btn mx-2" style="background-color: #c58876; color: white;">검색</button>
         </div>
     </form>
 
