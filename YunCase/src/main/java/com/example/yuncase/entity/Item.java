@@ -1,5 +1,6 @@
 package com.example.yuncase.entity;
 
+import com.example.yuncase.constant.ItemSellStatus;
 import com.example.yuncase.dto.ItemFormDto;
 import lombok.Getter;
 import lombok.Setter;
@@ -31,6 +32,9 @@ public class Item extends BaseEntity{
     @Column(nullable = false)
     private String type;
 
+    @Enumerated(EnumType.STRING)
+    private ItemSellStatus itemSellStatus;
+
     @ManyToMany
     @JoinTable(
             name = "member_item",
@@ -44,6 +48,7 @@ public class Item extends BaseEntity{
         this.price = itemFormDto.getPrice();
         this.itemDetail = itemFormDto.getItemDetail();
         this.type = itemFormDto.getType();
+        this.itemSellStatus = itemFormDto.getItemSellStatus();
     }
 
 }

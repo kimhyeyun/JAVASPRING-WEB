@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http//www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/layout}">
+
+<head>
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+</head>
+<th:block layout:fragment="script">
+    <script th:inline="javascript">
+
+        function removeBoard(obj){
+            var boardId = obj.dataset.id;
+            var token = $("meta[name='_csrf']").attr("content");
+            var header = $("meta[name='_csrf_header']").attr("content");
+
+            var url = "/board/delete/" + boardId;
+
+            $.ajax({
+                url      : url,
+                type     : "DELETE",
+                beforeSend : function(xhr){
+                    /* 데이터를 전송하기 전에 헤더에 csrf값을 설정 */
+                    xhr.setRequestHeader(header, token);
+                },
+                dataType : "json",
+                cache   : false,
+                success  : function(result, status){
+                    location.href='/board/list';
+                },
+                error : function(jqXHR, status, error){
+
+                    if(jqXHR.status == '401'){
+                        alert('로그인 후 이용해주세요');
+                        location.href='/members/login';
+                    } else{
+                        alert(jqXHR.responseJSON.message);
+                    }
+
+                }
+            });
+        }
+    </script>
+</th:block>
+<th:block layout:fragment="css">
+    <style>
+        table{
+            border-top: 1px solid #f3f3f3;
+            border-bottom: 1px solid #f3f3f3;
+            width: 100%;
+            border: 0;
+            vertical-align: middle;
+        }
+        tbody{
+            display: table-row-group;
+        }
+        tr{
+            display: table-row;
+        }
+        tbody  th{
+            width: 90px;
+            padding: 10px 0 10px 8px;
+            background-color: #f9f9f9;
+            vertical-align: middle;
+            font-weight: normal;
+        }
+        td{
+            border-bottom: 1px solid #f3f3f3;
+            padding: 10px 0 10px 15px;
+        }
+        td > th{
+            display: table-cell;
+        }
+        .etcArea{
+            text-align: right;
+            padding-right: 30px;
+        }
+        .etcArea li{
+            display: inline-block;
+            padding: 0px 20px 10px 30px;
+            vertical-align: top;
+            line-height: 22px;
+            color: #555;
+            list-style: none;
+        }
+        strong{
+            letter-spacing: 1px;
+        }
+        .date{
+            font-size: 11px;
+        }
+        .detail{
+            padding: 50px 20px 40px;
+            border-top: 1px solid #f3f3f3;
+            word-break: break-all;
+            line-height: 22px;
+            text-align: left;
+        }
+        .btnDiv{
+            padding-top: 20px;
+            float: right;
+        }
+    </style>
+</th:block>
+
+
+<div layout:fragment="content">
+
+    <input type="hidden" id="boardId" th:value="${board.id}">
+
+        <div class="container">
+            <table>
+                <tbody>
+                <tr>
+                    <th scope="row">제목</th>
+                    <td th:text="${board.boardNm}"></td>
+                </tr>
+                <tr>
+                    <th scope="row">작성자</th>
+                    <td th:text="${board.member.name}"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <ul class="etcArea">
+                            <li>
+                                <strong>작성일</strong>
+                                <span class="date" th:text="${#temporals.format(board.regtime, 'yyyy-MM-dd')}"></span>
+                            </li>
+                        </ul>
+                        <div class="detail" th:text="${board.boradDetail}"></div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    <div class="btnDiv">
+    <button th:data-id="${board.id}"  type="button" class="btn btn-lg" style="background-color: #c58876; color: white;" onclick="removeBoard(this)">삭제</button>
+        <a class="btn btn-lg" th:href="'/board/update/'+${board.id}" th:text="수정" style="background-color: #c58876; color: white;"></a>
+    </div>
+</div>
+
+</html>

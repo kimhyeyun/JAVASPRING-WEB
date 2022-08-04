@@ -1,7 +1,190 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a5e2d33-a7ba-4559-9e0e-2276f8ca0f11" name="Changes" comment="" />
+    <list default="true" id="0a5e2d33-a7ba-4559-9e0e-2276f8ca0f11" name="Changes" comment="commit">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/ShopApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/config/AuditConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/config/AuditorAwareImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/config/CustomAuthenticationEntryPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/constant/ItemSellStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/constant/OrderStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/constant/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/controller/ItemController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/controller/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/controller/MemberController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/controller/ThymeleafExController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/dto/ItemDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/dto/ItemFormDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/dto/ItemImgDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/dto/MemberFormDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/entity/BaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/entity/BaseTimeEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/entity/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/entity/CartItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/entity/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/entity/ItemImg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/entity/Member.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/entity/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/entity/OrderItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/repository/CartRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/repository/ItemRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/repository/MemberRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/repository/OrderItemRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/repository/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/example/shop/serivce/MemberService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/css/layout1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/04ef9539-82f7-401c-b679-dd1859bbc09a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/11fd410d-df6f-45c1-979a-266d127418e2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/14b553c1-030f-4006-8ae6-417700899efa.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/18306914-67ee-419f-9245-9861ad89063d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/1860e1d4-ca4c-40b3-95be-e0acba7fd4dc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/188c053a-a996-4b24-97b5-006aba11049f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/22d5235b-08a9-4bb5-a2ad-598cd3a3e71e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/3259468f-4d9d-4c25-a980-9be27f3dd8de.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/339bef03-9521-4dcf-9014-67a44d93d861.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/3dc9cc5a-59de-439e-92e8-500f625ca5b1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/481516ca-afa0-421f-a868-442c3e7964ef.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/484d41a1-51fd-41ab-bdf4-ad3af478fe15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/508868e2-6e21-4519-bd6a-33f9dd27d462.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/51f06eab-76be-43f6-8652-34ef8561e09d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/533cefe2-9640-497e-bcad-7861652e7b9b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/5be96691-4707-4f0c-8cc1-2d2efbff8e01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/60b8d3b9-e408-46fa-97c2-865d09d1efa7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/6531e1c2-887e-4ba7-97af-41a6f94dff58.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/67d74f95-f8cd-4567-8e03-bb2410209ef3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/73af3171-6d55-4c94-9cff-22f693ecf56a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/75c43134-8b50-43aa-ae85-b2c456e827f6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/7e1f9cdf-95b6-4f84-9c80-f5d3f4d41e07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/81ab6cb2-9035-4f8b-b452-d75061b48feb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/8b59d4e0-1d35-43af-9584-efcd0199ce68.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/8d59ad1e-b2d0-4fb2-b61f-178c1f69f976.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/af37c265-4c71-4b6e-929d-a7e7b8c99046.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/ba129aab-e597-448c-bfdc-2ab95888d40e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/bd45d85d-ed02-4825-bd93-036a4d334a33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/cbed5733-42a5-4d74-b64f-a63774104ba5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/d5a9877a-6d40-481d-a077-d8d5bd2325c7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/d8650a39-c611-4269-b44f-e07b284ce66f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/e6b24d0a-f28b-405b-88fa-dfa666d8c604.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/eb096579-2221-43ce-9508-bfcf897cf682.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/ed4b706f-fe57-4240-88b8-97d687240a70.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/static/images/fdb25420-1a54-44f9-b809-2c68df23ecf8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/templates/fragments/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/templates/fragments/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/templates/item/itemForm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/templates/layouts/layout1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/templates/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/templates/member/memberForm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/templates/member/memberLoginForm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/templates/thymeleafEx/thymeleafEx01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/templates/thymeleafEx/thymeleafEx02.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/templates/thymeleafEx/thymeleafEx03.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/templates/thymeleafEx/thymeleafEx04.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/templates/thymeleafEx/thymeleafEx05.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/templates/thymeleafEx/thymeleafEx06.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/main/resources/templates/thymeleafEx/thymeleafEx07.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/test/java/com/example/shop/ShopApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/test/java/com/example/shop/controller/ItemControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/test/java/com/example/shop/controller/MemberControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/test/java/com/example/shop/entity/CartTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/test/java/com/example/shop/entity/OrderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/test/java/com/example/shop/repository/ItemRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop/src/test/java/com/example/shop/serivce/MemberServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YunCase/src/main/java/com/example/yuncase/constant/ItemSellStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YunCase/src/main/resources/static/images/06f7c5db-499d-4d12-b0d5-dd9e927f8114.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YunCase/src/main/resources/static/images/1270e4d1-4d96-494c-bf42-2c2a27039bbd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YunCase/src/main/resources/static/images/17e02eaf-588e-4369-be53-6b0c54519158.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YunCase/src/main/resources/static/images/3bb4e1bd-905a-4efe-931a-4c5bd593888b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YunCase/src/main/resources/static/images/5179080b-e749-4a16-8e3f-89c196ca0ebe.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YunCase/src/main/resources/static/images/6b147e29-7ac5-410f-875c-c3c04cbde87d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YunCase/src/main/resources/static/images/75750fc4-4b14-44cf-ab75-652202c23c68.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YunCase/src/main/resources/static/images/7685303e-789f-478e-8f82-7033cef98cbd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YunCase/src/main/resources/static/images/9163c329-12b1-4e81-bb82-40c53f903699.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YunCase/src/main/resources/static/images/920fb85c-6838-4f28-913f-4b668d43a2c9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YunCase/src/main/resources/static/images/c5109b9b-a3e6-4329-a367-0d37d04423b7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YunCase/src/main/resources/static/images/c78fada6-6ee1-46c7-9058-60025a2e1339.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YunCase/src/main/resources/static/images/e59f26bf-02d0-4a4c-9715-e902f6145a29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YunCase/src/main/resources/static/images/f10d0771-80ec-4ab1-a139-a6541360782b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YunCase/src/main/resources/templates/alert.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YunCase/src/main/resources/templates/board/boardDtl.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inflearn/start/hello-spring/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inflearn/start/hello-spring/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inflearn/start/hello-spring/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inflearn/start/hello-spring/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inflearn/start/hello-spring/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inflearn/start/hello-spring/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inflearn/start/hello-spring/hs_err_pid1741.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inflearn/start/hello-spring/hs_err_pid1767.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inflearn/start/hello-spring/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inflearn/start/hello-spring/src/main/java/com/example/hello/hellospring/HelloSpringApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inflearn/start/hello-spring/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inflearn/start/hello-spring/src/test/java/com/example/hello/hellospring/HelloSpringApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/main/java/com/example/studybook/StudyBookApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/main/java/com/example/studybook/domain/BaseTimeEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/main/java/com/example/studybook/domain/posts/Posts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/main/java/com/example/studybook/domain/posts/PostsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/main/java/com/example/studybook/service/PostsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/main/java/com/example/studybook/web/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/main/java/com/example/studybook/web/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/main/java/com/example/studybook/web/PostsApiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/main/java/com/example/studybook/web/dto/HelloResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/main/java/com/example/studybook/web/dto/PostsListResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/main/java/com/example/studybook/web/dto/PostsResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/main/java/com/example/studybook/web/dto/PostsSaveRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/main/java/com/example/studybook/web/dto/PostsUpdateRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/main/resources/static/js/app/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/main/resources/templates/index.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/main/resources/templates/layout/footer.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/main/resources/templates/layout/header.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/main/resources/templates/posts-save.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/main/resources/templates/posts-update.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/test/java/com/example/studybook/StudyBookApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/test/java/com/example/studybook/domain/posts/PostsRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/test/java/com/example/studybook/web/HelloControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/test/java/com/example/studybook/web/IndexControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/test/java/com/example/studybook/web/PostsApiControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studyBook/src/test/java/com/example/studybook/web/dto/HelloResponseDtoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunCase/src/main/java/com/example/yuncase/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/YunCase/src/main/java/com/example/yuncase/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunCase/src/main/java/com/example/yuncase/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/YunCase/src/main/java/com/example/yuncase/controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunCase/src/main/java/com/example/yuncase/dto/BoardFormDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/YunCase/src/main/java/com/example/yuncase/dto/BoardFormDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunCase/src/main/java/com/example/yuncase/dto/ItemFormDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/YunCase/src/main/java/com/example/yuncase/dto/ItemFormDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunCase/src/main/java/com/example/yuncase/entity/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/YunCase/src/main/java/com/example/yuncase/entity/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunCase/src/main/java/com/example/yuncase/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/YunCase/src/main/java/com/example/yuncase/entity/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunCase/src/main/java/com/example/yuncase/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/YunCase/src/main/java/com/example/yuncase/service/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunCase/src/main/java/com/example/yuncase/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/YunCase/src/main/java/com/example/yuncase/service/ItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunCase/src/main/resources/templates/board/boardForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/YunCase/src/main/resources/templates/board/boardForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunCase/src/main/resources/templates/board/boardList.html" beforeDir="false" afterPath="$PROJECT_DIR$/YunCase/src/main/resources/templates/board/boardList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunCase/src/main/resources/templates/fragments/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/YunCase/src/main/resources/templates/fragments/sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunCase/src/main/resources/templates/item/itemDtl.html" beforeDir="false" afterPath="$PROJECT_DIR$/YunCase/src/main/resources/templates/item/itemDtl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunCase/src/main/resources/templates/item/itemForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/YunCase/src/main/resources/templates/item/itemForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunCase/src/main/resources/templates/item/itemMng.html" beforeDir="false" afterPath="$PROJECT_DIR$/YunCase/src/main/resources/templates/item/itemMng.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunCase/src/main/resources/templates/layouts/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/YunCase/src/main/resources/templates/layouts/layout.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +192,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="221s6BbI6lELMhPfuScfhy5S1VR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -20,7 +211,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -38,6 +231,7 @@
       <option name="presentableId" value="Default" />
       <updated>1639016255092</updated>
       <workItem from="1639016257497" duration="27000" />
+      <workItem from="1659622338619" duration="677000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
@@ -46,10 +240,23 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
     <option name="LAST_COMMIT_MESSAGE" value="commit" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -1,5 +1,6 @@
 package com.example.yuncase.dto;
 
+import com.example.yuncase.constant.ItemSellStatus;
 import com.example.yuncase.entity.Item;
 import lombok.Getter;
 import lombok.NonNull;
@@ -26,6 +27,7 @@ public class ItemFormDto {
     private String itemDetail;
 
     private String type;
+    private ItemSellStatus itemSellStatus;
 
     private List<ItemImgDto> itemImgDtoList = new ArrayList<>();
     private List<Long> itemImgIds = new ArrayList<>();

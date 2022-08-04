@@ -1,6 +1,7 @@
 package com.example.yuncase.dto;
 
 import com.example.yuncase.entity.Board;
+import com.example.yuncase.entity.Item;
 import lombok.Getter;
 import lombok.Setter;
 import org.modelmapper.ModelMapper;
@@ -19,4 +20,12 @@ public class BoardFormDto {
 
     private static ModelMapper modelMapper = new ModelMapper();
 
+    public static BoardFormDto of(Board board) {
+        BoardFormDto boardFormDto = new BoardFormDto();
+        boardFormDto.id = board.getId();
+        boardFormDto.boardNm = board.getBoardNm();
+        boardFormDto.boardDetail = board.getBoradDetail();
+
+        return boardFormDto;
+    }
 }

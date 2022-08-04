@@ -57,7 +57,7 @@
             <thead>
             <tr>
                 <td>번호</td>
-                <td>제목</td>
+                <td style=" width: 40%;">제목</td>
                 <td>등록자</td>
                 <td>등록일</td>
             </tr>
@@ -70,7 +70,7 @@
                     <a th:href="'/board/'+${item.id}" th:text="${item.boardNm}" style="color: #6d6d6d;"></a>
                 </td>
                 <td th:text="${item.createdBy}"></td>
-                <td th:text="${#temporals.format(item.updateTime, 'yyyy-MM-dd')}"></td>
+                <td th:text="${#temporals.format(item.regtime, 'yyyy-MM-dd')}"></td>
             </tr>
             </tbody>
         </table>
@@ -108,8 +108,8 @@
                 <option value="6m">6개월</option>
             </select>
             <select th:field="*{searchBy}" class="form-control" style="width:auto;">
-                <option value="itemNm">상품명</option>
-                <option value="createdBy">등록자</option>
+                <option value="itemNm">제목</option>
+                <option value="createdBy">작성자</option>
             </select>
             <input th:field="*{searchQuery}" type="text" class="form-control" placeholder="검색어를 입력해주세요">
             <button id="searchBtn" type="submit" class="btn mx-2" style="background-color: #c58876; color: white;">검색</button>

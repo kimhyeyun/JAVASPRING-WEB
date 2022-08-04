@@ -3,6 +3,7 @@ package com.example.yuncase.entity;
 import com.example.yuncase.constant.BoardStatus;
 import com.example.yuncase.constant.Role;
 import com.example.yuncase.dto.BoardFormDto;
+import com.example.yuncase.dto.ItemFormDto;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -39,5 +40,10 @@ public class Board extends BaseEntity {
         board.setBoardStatus(member.getRole() == Role.ADMIN ? BoardStatus.ADMIN : BoardStatus.GENERAL);
 
         return board;
+    }
+
+    public void updateItem(BoardFormDto boardFormDto) {
+        this.boardNm = boardFormDto.getBoardNm();
+        this.boradDetail = boardFormDto.getBoardDetail();
     }
 }

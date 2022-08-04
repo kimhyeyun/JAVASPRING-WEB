@@ -1,10 +1,14 @@
 package com.example.yuncase.service;
 
+import com.example.yuncase.constant.Role;
 import com.example.yuncase.dto.*;
+import com.example.yuncase.entity.Board;
 import com.example.yuncase.entity.Item;
 import com.example.yuncase.entity.ItemImg;
+import com.example.yuncase.entity.Member;
 import com.example.yuncase.repository.ItemImgRepository;
 import com.example.yuncase.repository.ItemRepository;
+import com.example.yuncase.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -12,6 +16,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
+import org.thymeleaf.util.StringUtils;
 
 import javax.persistence.EntityNotFoundException;
 import java.io.IOException;
@@ -25,6 +30,7 @@ public class ItemService {
     private final ItemRepository itemRepository;
     private final ItemImgRepository itemImgRepository;
     private final ItemImgService itemImgService;
+    private final MemberRepository memberRepository;
 
     public Long saveItem(ItemFormDto itemFormDto, List<MultipartFile> itemImgFileList) throws IOException {
         Item item = itemFormDto.createItem();
@@ -92,4 +98,5 @@ public class ItemService {
 
         return itemTypeDto;
     }
+
 }

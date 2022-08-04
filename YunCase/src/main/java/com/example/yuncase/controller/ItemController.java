@@ -4,6 +4,7 @@ import com.example.yuncase.dto.ItemFormDto;
 import com.example.yuncase.dto.ItemSearchDto;
 import com.example.yuncase.dto.ItemTypeDto;
 import com.example.yuncase.entity.Item;
+import com.example.yuncase.entity.ItemImg;
 import com.example.yuncase.service.ItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
@@ -11,17 +12,17 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.EntityNotFoundException;
 import javax.validation.Valid;
+import java.security.Principal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -78,11 +79,15 @@ public class ItemController {
         }
         try {
             itemService.updateItem(itemFormDto, itemImgFileList);
+            model.addAttribute("message", "수정되었습니다.");
+            model.addAttribute("url", "/admin/items");
+
+            return "alert";
         } catch (Exception e) {
             model.addAttribute("errorMessage", "상품 수정 중 에러가 발생했습니다.");
             return "item/itemForm";
         }
-        return "redirect:/";
+
     }
 
     @GetMapping(value = {"/admin/items", "/admin/items/{page}"})
@@ -122,4 +127,5 @@ public class ItemController {
 
         return "item/itemsByType";
     }
+
 }

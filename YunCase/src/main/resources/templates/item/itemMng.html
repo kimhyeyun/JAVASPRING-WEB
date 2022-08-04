@@ -66,7 +66,7 @@
             <tbody>
             <tr th:each="item : ${itemList}">
                 <td th:text="${item.id}"></td>
-
+                <td th:text="${item.itemSellStatus == T(com.example.yuncase.constant.ItemSellStatus).SELL} ? '판매중' : '품절'"></td>
                 <td th:text="${item.type}"></td>
                 <td>
                     <a th:href="'/admin/item/'+${item.id}" th:text="${item.itemNm}" style="color: #6d6d6d;"></a>
